@@ -1,0 +1,31 @@
+{
+  "name": "gene_server",
+  "version": "0.0.1",
+  "license" : "SEE LICENSE IN LICENSE",
+  "repository": "Caleydo/gene_server",
+  "dependencies": {
+  },
+  "peerDependencies": {
+    "caleydo_server": "*"
+  },
+  "caleydo": {
+    "plugins": {
+      "python": [
+        {
+          "type": "gene_type",
+          "id": "gene_processor",
+          "file": "gene_processor"
+        },
+        {
+          "type": "namespace",
+          "id": "gene_processor",
+          "file": "gene_processor_api",
+          "namespace": "/api/gene_processor"
+        }
+      ]
+    }
+  },
+  "publishConfig": {
+    "registry": "http://registry.caleydo.org/"
+  }
+}
